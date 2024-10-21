@@ -1,0 +1,18 @@
+<div class="wrap-search">
+    <div class="content">
+        <div class="input-group">
+            <button class="btn-history" type="button" (click)="showHistorial()" title="Ver el historial de búsqueda">
+                <img src="../../../../assets/icon/TablerClockHour3.svg" alt="Historial">
+            </button>
+            <input type="text" placeholder="Buscar gif..." name="searchTerm" id="term" [(ngModel)]="searchTerm" (keydown.enter)="getGifs()">
+            <button class="btn-search" type="submit" (click)="getGifs()" title="Buscar">
+                <img src="../../../../assets/icon/LineMdSearch.svg" alt="Buscar">
+            </button>
+        </div>
+        <span class="text-error" *ngIf="searchTerm.trim() === '' && isSubmit">Ingrese un texto válido</span>
+    </div>
+</div>
+
+<div *ngIf="showRecentSearches">
+    <app-search-history></app-search-history>
+</div>

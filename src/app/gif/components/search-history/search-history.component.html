@@ -1,0 +1,24 @@
+<section class="content">
+    <div class="header">
+        <h4>Búsquedas recientes</h4>
+        <button (click)="hideHistory()" title="Cerrar Modal">
+            <img src="../../../../assets/icon/HeroiconsSolidX.svg" alt="Cerrar">
+        </button>
+    </div>
+    <div *ngIf="searchHistory$ | async as searchHistory">
+        <ul class="term-list" *ngIf="searchHistory.length > 0; else emptyHistory">
+            <li class="search-term" *ngFor="let term of searchHistory">
+                <button class="btn-term" (click)="searchFromHistory(term)">
+                    <img src="../../../../assets/icon/NimbusClock.svg" alt="ícono de reloj">
+                    <span>{{term}}</span>
+                </button>
+                <button class="btn-delete" (click)="deleteSerchTerm(term)" title="Eliminar búsqueda">
+                    <img src="../../../../assets/icon/SolidXSmall.svg" alt="X">
+                </button>
+            </li>
+        </ul>
+    </div>
+    <ng-template #emptyHistory>
+        <p class="empty">Historial vacío</p>
+    </ng-template>
+</section>

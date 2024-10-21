@@ -1,0 +1,74 @@
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    min-width: 330px;
+
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    z-index: 999;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.header button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.header button:hover {
+    opacity: 1;
+}
+
+.term-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-term {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search-term button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-term button img,
+.btn-delete {
+    opacity: 0.5;
+}
+
+.btn-delete:hover,
+.search-term button:hover img {
+    opacity: 1;
+}
+
+.btn-term {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.empty {
+    text-align: center;
+}

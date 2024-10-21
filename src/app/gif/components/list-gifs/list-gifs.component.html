@@ -1,0 +1,12 @@
+<div class="wrap" *ngIf="gifs$ | async as gifs">
+    <ul class="gifs-container" *ngIf="gifs.length > 0">
+        <li *ngFor="let gif of gifs" class="gif">
+            <img [src]="gif.images.downsized_medium.url" [alt]="gif.alt_text" loading="lazy">
+            <p class="title">{{gif.title.length > 2 ? gif.title : 'Título no disponible'}}</p>
+        </li>
+    </ul>
+</div>
+
+<ng-container *ngIf="showLoading">
+    <app-loader></app-loader>
+</ng-container>

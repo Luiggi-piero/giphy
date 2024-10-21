@@ -1,0 +1,52 @@
+.wrap-search {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-group input {
+    padding: 1rem 1.5rem;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+}
+
+.input-group button {
+    padding: 0.5rem 0.8rem;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.input-group button:hover {
+    opacity: 1;
+}
+
+.btn-search {
+    border-radius: 0 5px 5px 0;
+    background-image: linear-gradient(45deg, rgb(230, 70, 182) 0%, rgb(255, 102, 102) 50%, rgb(230, 70, 182) 100%);
+}
+
+.btn-history {
+    border-radius: 5px 0 0 5px;
+}
+
+.text-error {
+    color: #FF2E63;
+}
+
+@media (max-width: 400px) {
+    .input-group input {
+        padding: 0.3rem 0.5rem;
+    }
+}
